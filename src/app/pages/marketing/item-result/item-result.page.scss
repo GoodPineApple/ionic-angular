@@ -1,0 +1,221 @@
+ion-content {
+  // hide scrollbar
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  --padding-top: 40px;
+  text-align: center;
+
+  h1 {
+    width: 300px;
+    height: 29px;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--ion-color-primary);
+    margin: 0 auto;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .phrase {
+    font-weight: 300;
+    margin-bottom: 36px;
+
+    &--more-than-50 {
+      color: var(--ion-color-primary);
+      padding: 0 40px;
+      line-height: 1.75;
+    }
+
+    &--less-than-50 {
+      color: var(--ion-color-primary);
+      padding: 0 40px;
+      line-height: 1.75;
+    }
+  }
+
+  ion-button {
+    --box-shadow: 0;
+    --padding-start: 0;
+    --padding-end: 0;
+
+    &.button {
+      &--detail {
+        --background: var(--ion-color-secondary);
+        --color: #fff;
+        --background-focused: var(--ion-color-secondary-tint);
+        --background-hover: var(--ion-color-secondary-tint);
+
+        height: 52px;
+        font-size: 1rem;
+      }
+
+      &--pre-reservation {
+        width: 100%;
+        height: 72px;
+        --background: var(--ion-color-primary);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.8;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+      }
+
+      &--retry {
+        --background: none;
+        --background-hover: none;
+        width: 34px;
+        height: 33.7px;
+        transition: all 2s;
+
+        &:hover {
+          transform: scale(1.3);
+        }
+      }
+
+      &--share {
+        --background: none;
+        --background-hover: none;
+        width: 32px;
+        height: 36.3px;
+      }
+    }
+  }
+
+  ion-grid {
+    --ion-grid-padding: 0;
+
+    ion-col {
+      --ion-grid-column-padding: 0;
+      width: 160px;
+      height: 160px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  .container--result-and-buttons {
+    width: 100%;
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .point-box {
+      height: 68px;
+      border-radius: 36px;
+      background-color: var(--ion-color-primary-shade);
+      margin: 0 24px 0 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        width: 120px;
+        height: 59px;
+        font-size: 40px;
+        font-weight: 500;
+        color: #fff;
+        margin: 4px 0 9px 0;
+        padding-right: 5px;
+
+        span {
+          font-weight: 300;
+        }
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        margin: 0 19px 0 24px;
+      }
+    }
+  }
+}
+
+.container--voted-num-tag {
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  background-color: var(--ion-color-primary-shade);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.voted {
+    background-color: var(--ion-color-secondary);
+  }
+
+  &.un-voted {
+    background-color: var(--ion-color-primary-shade);
+  }
+
+  > .voted-num-tag {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  img {
+    width: 12px;
+    height: 12px;
+    margin-right: 7px;
+  }
+}
+
+.empty-space {
+  height: 72px;
+}
+
+@media screen and (max-width: 420px) {
+  ion-grid {
+    ion-col {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  ion-grid {
+    ion-col {
+      width: 125px;
+      height: 125px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  ion-grid {
+    ion-col {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}

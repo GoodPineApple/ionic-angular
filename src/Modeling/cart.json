@@ -1,0 +1,21 @@
+{
+    "data_type" : "root-collection",
+    "id" : "string",
+    "user_id" : "string",
+    "order_id_map" : {
+        "data_type" : "map",
+        "order_id" : "boolean"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

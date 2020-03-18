@@ -1,0 +1,92 @@
+<ion-content>
+  <main class="main">
+    <img
+      class="logo"
+      src="../../../../assets/img/title-color-200316@3x.png"
+      alt="shaahop_logo"
+    />
+
+    <ion-button class="button button--gmail-signin" (click)="loginGmail()"
+      ><div>
+        <img src="../../../../assets/img/google-logo-2-littledeep@3x.png" />
+      </div>
+      Google 계정으로 가입하기</ion-button
+    >
+
+    <div class="container container--phrase ">
+      <div class="line">&nbsp;</div>
+      <span>이메일로 가입하기</span>
+      <div class="line">&nbsp;</div>
+    </div>
+
+    <form [formGroup]="signupForm">
+      <ion-input
+        class="email"
+        formControlName="email"
+        type="email"
+        placeholder="이메일"
+        [class.invalid]="!signupForm.controls['email'].valid && signupForm.controls['email'].touched"
+      >
+      </ion-input>
+
+      <ion-item
+        class="error-message i-no-margin"
+        *ngIf="!signupForm.controls['email'].valid
+      && signupForm.controls['email'].touched"
+      >
+        <ion-label>이메일이 올바르지 않습니다.</ion-label>
+      </ion-item>
+
+      <ion-input
+        class="password"
+        formControlName="password"
+        type="password"
+        placeholder="비밀번호"
+        [class.invalid]="!signupForm.controls['password'].valid && signupForm.controls['password'].touched"
+      >
+      </ion-input>
+
+      <ion-item
+        class="error-message"
+        *ngIf="!signupForm.controls['password'].valid  &&
+      signupForm.controls['password'].touched"
+      >
+        <ion-label>비밀번호는 6자리 이상이어야 합니다.</ion-label>
+      </ion-item>
+
+      <p>
+        가입 시 사용 약관과 개인정보 취급방침
+      </p>
+
+      <ion-button
+        class="button button--signin"
+        expand="block"
+        (click)="signupUser(signupForm)"
+        [disabled]="!signupForm.valid"
+      >
+        가입하기
+      </ion-button>
+    </form>
+
+    <div>이미 계정이 있으신가요?</div>
+    <ion-button
+      class="button button--signin"
+      expand="block"
+      (click)="goLogin()"
+    >
+      로그인하기
+    </ion-button>
+
+    <div class="container container--phrase ">
+      <div class="line">&nbsp;</div>
+      <span>간편하게 가입하기</span>
+      <div class="line">&nbsp;</div>
+    </div>
+
+    <div class="container container--social-login">
+      <img src="../../../../assets/img/facebook@3x.png" alt="facebook" />
+      <img src="../../../../assets/img/naver@3x.png" alt="facebook" />
+      <img src="../../../../assets/img/kakao@3x.png" alt="facebook" />
+    </div>
+  </main>
+</ion-content>

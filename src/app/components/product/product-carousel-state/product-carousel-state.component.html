@@ -1,0 +1,41 @@
+<ion-slides pager="false" [options]="GroupSlideOpts">
+  <ion-slide>
+    <ion-card (click) = "addProduct()">
+      <ion-button vertical="center" horizontal="center" size="large" slot="fixed" >
+        <ion-icon name="add-circle" ></ion-icon>
+      </ion-button>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide @items *ngFor="let product of productArr$ | async">
+    <ion-card *ngIf="product != null"  (click) = "goProductDtl(product.groupId, product.id)">
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button size="small" >
+          <ion-icon name="share"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      <img src="../../assets/img/s3.jpg" width="150px"/>
+      <ion-card-header>
+        <ion-card-subtitle>{{product.productName}}</ion-card-subtitle>
+        <ion-card-title>{{product.productCurrency}} {{product.productPrice}}</ion-card-title>
+      </ion-card-header>
+      <ion-progress-bar color="success" value="1.0" buffer="1.0"></ion-progress-bar>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card (click) = "goProductDtl('3OBRyM0Dz4olHYcH3PVc','FMPVCit7OWJP2UuUTaTH')">
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+        <ion-fab-button size="small" >
+          <ion-icon name="share"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      <img src="../../assets/img/s3.jpg" width="150px"/>
+      <ion-card-header>
+        <ion-card-subtitle>상품명</ion-card-subtitle>
+        <ion-card-title>$ 99</ion-card-title>
+      </ion-card-header>
+      <ion-progress-bar color="success" value="1.0" buffer="1.0"></ion-progress-bar>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

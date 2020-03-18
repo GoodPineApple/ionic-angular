@@ -1,0 +1,20 @@
+
+<app-header [isRootPage]="true"></app-header>
+
+<ion-content>
+  <ion-slides  pager="true" [options]="firstSlideOpts">
+    <ion-slide  *ngFor="let num of numbers">
+      <ion-card>
+        <img src="https://tshop.r10s.jp/culture/cabinet/1901-pic31/gu-4963160gcat8163_1.jpg?fitin=330:330" />
+        <ion-card-header>  
+          <ion-card-subtitle> [WALLET's choice] Gucci </ion-card-subtitle>
+          <ion-card-title>$ 20.99</ion-card-title>
+        </ion-card-header>
+        <ion-progress-bar value="0.5" buffer="0.7"></ion-progress-bar>
+      </ion-card>  
+    </ion-slide>
+  </ion-slides>
+
+  <app-group-list> </app-group-list>
+
+</ion-content>

@@ -1,0 +1,67 @@
+<app-header
+  [isRootPage]="false"
+  [backRedirectUrl]="backRedirectUrl"
+></app-header>
+
+<ion-content>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let num of numbers">
+      <ion-card>
+        <img src="../../assets/img/s3.jpg" />
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list lines="full">
+    <ion-item>
+      <ion-label slot="start">쇼핑몰</ion-label>
+      <ion-label
+        >{{product?.shopSiteName}} ({{product?.shopSiteUrl}})</ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start">상품명</ion-label>
+      <ion-label>{{product?.productName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start">옵션</ion-label>
+      <ion-label>{{product?.productOption}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label slot="start">상세정보</ion-label>
+      <ion-label>{{product?.productDetail}}</ion-label>
+    </ion-item>
+    <!-- <ion-item>
+          <ion-label>Toggle</ion-label>
+          <ion-input disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Radio</ion-label>
+          <ion-radio slot="end"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Radio</ion-label>
+          <ion-radio slot="end"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Checkbox</ion-label>
+          <ion-checkbox slot="start"></ion-checkbox>
+        </ion-item> -->
+  </ion-list>
+  <section>
+    <ion-button
+      (click)="shareProduct()"
+      expand="full"
+      size="large"
+      color="light"
+      >사달라고 조르기 (공유)</ion-button
+    >
+    <ion-button
+      (click)="getMoreProduct()"
+      expand="full"
+      size="large"
+      color="medium"
+      >해외상품 더보기</ion-button
+    >
+  </section>
+</ion-content>

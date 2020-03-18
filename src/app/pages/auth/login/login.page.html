@@ -1,0 +1,93 @@
+<ion-content>
+  <main class="main">
+    <img
+      class="logo"
+      src="../../../../assets/img/title-color-200316@3x.png"
+      alt="shaahop_logo"
+    />
+
+    <ion-button class="button button--gmail-signin" (click)="loginGmail()"
+      ><div>
+        <img src="../../../../assets/img/google-logo-2-littledeep@3x.png" />
+      </div>
+      Google 계정으로 로그인하기</ion-button
+    >
+
+    <div class="container container--phrase ">
+      <div class="line">&nbsp;</div>
+      <span>이메일로 로그인하기</span>
+      <div class="line">&nbsp;</div>
+    </div>
+
+    <form [formGroup]="loginForm">
+      <ion-input
+        [ngClass]="{'email': loginForm.controls['email'].valid , 'email-e':loginForm.controls['email'].valid}"
+        formControlName="email"
+        type="email"
+        placeholder="Your email address"
+        [class.invalid]="!loginForm.controls['email'].valid &&
+        loginForm.controls['email'].touched"
+        value="forest0121@gmail.com"
+      >
+      </ion-input>
+
+      <ion-label
+        class="label label--error-message"
+        *ngIf="!loginForm.controls['email'].valid &&
+         loginForm.controls['email'].touched"
+        >이메일이 올바르지 않습니다!</ion-label
+      >
+
+      <ion-input
+        class="password"
+        formControlName="password"
+        type="password"
+        placeholder="Your password"
+        [class.invalid]="!loginForm.controls['password'].valid&& loginForm.controls['password'].touched"
+        value="qwer1234"
+      >
+      </ion-input>
+
+      <div class="container container--keep-login">
+        <ion-checkbox></ion-checkbox>
+        <ion-label>로그인 상태 유지</ion-label>
+      </div>
+
+      <ion-button
+        class="button button--signin"
+        (click)="loginUser(loginForm)"
+        expand="block"
+        [disabled]="!loginForm.valid"
+      >
+        로그인하기
+      </ion-button>
+    </form>
+
+    <div class="container container--user-engagement">
+      <span
+        class="find-account"
+        expand="block"
+        fill="clear"
+        routerLink="/reset-password"
+      >
+        계정찾기
+      </span>
+      <div class="divider">&nbsp;</div>
+      <span class="signup" expand="block" fill="clear" routerLink="/signup">
+        가입하기
+      </span>
+    </div>
+
+    <div class="container container--phrase ">
+      <div class="line">&nbsp;</div>
+      <span>간편하게 로그인하기</span>
+      <div class="line">&nbsp;</div>
+    </div>
+
+    <div class="container container--social-login">
+      <img src="../../../../assets/img/facebook@3x.png" alt="facebook" />
+      <img src="../../../../assets/img/naver@3x.png" alt="facebook" />
+      <img src="../../../../assets/img/kakao@3x.png" alt="facebook" />
+    </div>
+  </main>
+</ion-content>

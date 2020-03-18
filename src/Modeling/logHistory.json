@@ -1,0 +1,33 @@
+{
+    "data_type" : "root-collection",
+    "id" : {
+        "data_type" : "string"
+    },
+    "function_text" : {
+        "data_type" : "string"
+    },
+    "log_comments" : {
+        "data_type" : "string"
+    },
+    "kind" : {
+        "data_type" : "string"
+    },
+    "user_id" : {
+        "data_type" : "string"
+    },
+    "log_ip" : {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

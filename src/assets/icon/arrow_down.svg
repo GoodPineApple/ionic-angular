@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9.428" viewBox="0 0 16 9.428">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="패스_2040" data-name="패스 2040" class="cls-1" d="M545.871,7.129,540.3,12.7l-5.571-5.571a1.381,1.381,0,0,0-2,0,1.381,1.381,0,0,0,0,2L539.3,15.7a1.381,1.381,0,0,0,2,0l6.571-6.571a1.414,1.414,0,1,0-2-2Z" transform="translate(-532.3 -6.7)"/>
+</svg>

@@ -1,0 +1,101 @@
+@import "../../../../sass/abstracts/mixins";
+
+ion-content {
+  // hide scrollbar
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  // --background: var(--ion-background-color) !important;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ion-button {
+    --box-shadow: 0;
+
+    &.button {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 80px;
+      }
+
+      &--hate {
+        --background: var(--ion-color-primary-shade);
+      }
+
+      &--like {
+        --background: var(--ion-color-primary);
+      }
+
+      &--hate,
+      &--like {
+        img {
+          width: 72px;
+        }
+      }
+
+      &--detail {
+        --background: var(--ion-color-secondary);
+        --background-focused: var(--ion-color-secondary-tint);
+        --background-hover: var(--ion-color-secondary-tint);
+        width: 100%;
+        height: 52px;
+        font-size: 1rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pT7vh {
+  --padding-top: 19px;
+}
+.pT2vh {
+  --padding-top: 16px;
+}
+
+.app-card-first {
+  margin-top: 16px;
+}
+
+.card-count {
+  width: 64px;
+  height: 24px;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 500;
+
+  border-radius: 12px;
+  border: solid 1px var(--ion-color-primary-tint);
+  color: var(--ion-color-primary-tint);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.empty-space {
+  height: 100px;
+}
+
+@media screen and (max-width: 375px) {
+  .radius-button {
+    width: 160px;
+    height: 64px;
+    border-radius: 36px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
+    background-color: var(--ion-color-primary-shade);
+  }
+}

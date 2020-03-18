@@ -1,0 +1,7 @@
+{
+  "name": "shaashop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

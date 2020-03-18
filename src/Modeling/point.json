@@ -1,0 +1,33 @@
+{
+    "data_type" : "root-collection",
+    "id" : {
+        "data_type" : "string"
+    },
+    "user_id" : {
+        "data_type" : "string"
+    },
+    "type" : {
+        "data_type" : "string"
+    },
+    "point" : {
+        "data_type" : "string"
+    },
+    "product_id" : {
+        "data_type" : "string"
+    },
+    "order_id" : {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

@@ -1,0 +1,19 @@
+<ion-slides pager="false" [options]="GroupSlideOpts">
+  <ion-slide *ngFor="let product of productArr">
+    <ion-card *ngIf="product != null">
+      <img src="{{ product.productImgUrl }}" width="150px" />
+      <ion-card-header>
+        <ion-card-subtitle>{{ product.productName }}</ion-card-subtitle>
+        <ion-card-title
+          >{{ product.productCurrency }}
+          {{ product.productPrice }}</ion-card-title
+        >
+      </ion-card-header>
+      <ion-progress-bar
+        color="success"
+        value="1.0"
+        buffer="1.0"
+      ></ion-progress-bar>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

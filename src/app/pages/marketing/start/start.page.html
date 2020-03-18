@@ -1,0 +1,43 @@
+<ion-content>
+  <h1>
+    아이템 <span>픽!</span><br />
+    지수 테스트
+  </h1>
+
+  <p class="description">
+    내가 픽!한 아이템이 다른 사람들에게<br />
+    얼마나 인기 있는 아이템인지 확인해보세요!
+  </p>
+
+  <!-- <form [formGroup]="formGroup"> -->
+  <ion-input
+    #startName
+    type="text"
+    placeholder="이름을 입력해 주세요."
+    (click)="trackUserInputClick()"
+  >
+  </ion-input>
+  <ion-label class="label label--input-label">
+    입력하신 이름은 수집하지 않습니다.
+  </ion-label>
+
+  <!-- <ion-label
+      class="label label--error-message"
+      *ngIf="!formGroup.controls['name'].valid && formGroup.controls['name'].touched"
+    >
+      특수문자, 숫자, 띄어쓰기가 포함되거나 자음 및 모음 혼자 사용할 수
+      없습니다.
+    </ion-label> -->
+
+  <div class="image-container mT5 mB5">
+    <img src="../../../../assets/img/result.png" />
+  </div>
+  <ion-button
+    class="button button--start"
+    (click)="goItemList(startName.value)"
+    expand="full"
+  >
+    시작
+  </ion-button>
+  <!-- </form> -->
+</ion-content>

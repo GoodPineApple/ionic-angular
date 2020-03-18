@@ -1,0 +1,31 @@
+{
+    "data_type" : "root-collection",
+    "_id": {
+        "data_type" : "string"
+    },
+    "product_name": {
+        "data_type" : "string"
+    },
+    "product_url": {
+        "data_type" : "string"
+    },
+    "cat_id_map": {
+        "data_type" : "map",
+        "product_id" : "boolean"
+    },
+    "status": {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

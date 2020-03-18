@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="title--primary"><span>샤샵 런칭</span><br />사전예약</div>
+
+  <div class="title--sub">
+    픽토리지 사전예약 시<br />
+    현금처럼 사용할 수 있는<br />
+    포인트를 드립니다.
+  </div>
+
+  <form [formGroup]="formGroup">
+    <ion-input
+      #userEmail
+      formControlName="email"
+      inputmode="email"
+      autocapitalize="off"
+      max="70"
+      placeholder="이메일 주소를 입력해주세요."
+      [class.invalid]="!formGroup.controls['email'].valid && formGroup.controls['email'].touched"
+    >
+    </ion-input>
+
+    <ion-label
+      class="label label--error-message"
+      *ngIf="!formGroup.controls['email'].valid &&
+        formGroup.controls['email'].touched"
+    >
+      올바른 이메일 형식을 입력해주세요.
+    </ion-label>
+
+    <div class="description">
+      {{startName}}님이 '좋아요'한 <br />아이템들을 저장할 수 있는 <br /><strong
+        ><픽토리지></strong
+      >
+      서비스가 정식 출시되면<br />
+      안내 메일을 보내드립니다.
+    </div>
+
+    <div class="empty-space"></div>
+
+    <ion-button
+      expand="full"
+      class="button button--reservation"
+      (click)="handleReservationButton(userEmail.value)"
+      [disabled]="!formGroup.controls['email'].valid&& formGroup.controls['email'].touched"
+    >
+      샤샵 사전 예약
+    </ion-button>
+  </form>
+</ion-content>

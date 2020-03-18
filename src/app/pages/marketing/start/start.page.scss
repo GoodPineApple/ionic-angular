@@ -1,0 +1,118 @@
+ion-content {
+  // hide scrollbar
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  --padding-top: 36px;
+  --padding-start: 36px;
+  --padding-end: 36px;
+  // --overflow: hidden;
+}
+
+start-page {
+  width: 296px;
+  background-color: black;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 5px 0px var(--ion-color-primary-shade);
+  -webkit-text-stroke: 1px var(--ion-color-primary-shade);
+
+  span {
+    color: var(--ion-color-secondary);
+  }
+}
+
+.description {
+  // width: 284px;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--ion-color-primary);
+  margin: 25px 0 32px 0;
+}
+
+ion-input {
+  // width: 320px;
+  height: 48px;
+  border-radius: 8px;
+  font-weight: normal;
+  background-color: #ffffff;
+  color: var(--ion-color-primary);
+  transform: translateX(-8px);
+  --padding-start: 20px;
+  --placeholder-color: var(--ion-color-primary);
+}
+
+ion-label {
+  &.label {
+    &--input-label {
+      width: 100%;
+      display: block;
+      height: 18px;
+      font-size: 11px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--ion-color-primary-tint);
+      display: inline-block;
+      margin: 9px 0 0 10px;
+    }
+
+    &--error-message {
+      color: #ff0000;
+      font-size: 12px;
+    }
+  }
+}
+
+ion-button {
+  --box-shadow: 0;
+  &.button {
+    &--start {
+      font-size: 20px;
+      color: #fff;
+      width: 100%;
+      height: 72px;
+      --background: var(--ion-color-primary);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-disabled {
+      --opacity: 0.95;
+    }
+  }
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 24px;
+}
+
+.empty-space {
+  height: 72px;
+}

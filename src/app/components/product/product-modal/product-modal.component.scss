@@ -1,0 +1,24 @@
+.img-container {
+  width: 375px;
+  height: 375px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.container {
+  &--button {
+    width: 100%;
+  }
+}
+
+.button {
+  &--modal-close {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}

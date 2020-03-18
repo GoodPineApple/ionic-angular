@@ -1,0 +1,30 @@
+{
+    "data_type" : "root-collection",
+    "id" : {
+        "data_type" : "string"
+    },
+    "user_id" : {
+        "data_type" : "string"
+    },
+    "order_id" : {
+        "data_type" : "string"
+    },
+    "parent_id" : {
+        "data_type" : "string"
+    },
+    "text" : {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

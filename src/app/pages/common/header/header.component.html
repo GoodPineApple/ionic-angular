@@ -1,0 +1,24 @@
+<ion-header translucent>
+  <ion-toolbar class="ion-no-margin">
+    <div>
+        <!-- <ion-avatar slot="start">
+          <img src="https://cdn.pixabay.com/photo/2016/10/09/15/21/business-man-1725976_960_720.png">
+        </ion-avatar> -->
+        <ion-buttons>
+          <ion-back-button *ngIf="!isRootPage" (click)="backClicked()" defaultHref="/main"></ion-back-button>
+          <ion-title>
+            {{shopName}}
+          </ion-title>
+          <ion-fab-button size="small" (click)="showEditShopModal()">
+            <ion-icon name="ios-create"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button size="small">
+            <ion-icon name="ios-share"></ion-icon>
+          </ion-fab-button>
+        </ion-buttons>
+    </div>
+
+
+
+  </ion-toolbar>
+</ion-header>

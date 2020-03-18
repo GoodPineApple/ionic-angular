@@ -1,0 +1,12 @@
+{
+    "data_type" : "root-collection",
+    "id" : {
+        "data_type" : "string"
+    },
+    "key" : {
+        "data_type" : "string"
+    },
+    "value" : {
+        "data_type" : "string"
+    }
+}

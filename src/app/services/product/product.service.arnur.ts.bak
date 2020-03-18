@@ -1,0 +1,138 @@
+import { Injectable } from '@angular/core';
+
+import { IProduct } from '../../interfaces/IProduct';
+import { HttpClient } from '@angular/common/http';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+import { Router } from '@angular/router';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+  products : any = [];
+  constructor(private http: HttpClient, private router : Router) { }
+
+  async addProduct(product : IProduct){
+    let currentUser = firebase.auth().currentUser;
+    if (!currentUser){
+      console.log("login first");
+      return;
+    }
+    const uid = currentUser.uid;
+    const prodRef = firebase.firestore().collection("products").doc();
+    const userRef = firebase.firestore().doc(`userProfile/${uid}`);
+    product.id = prodRef.id;
+    product.uid = uid;
+    prodRef.set(product);
+    userRef.update({
+      ['products.' + product.id] : true
+    });
+
+  }
+  async addProductByFreshness(product : IProduct){
+    const uid = firebase.auth().currentUser.uid;
+    let docid;
+    await firebase.firestore().collection("products").where("uid", "==", `${uid}`).where("fresh", "==", true).
+              get().then((qs) =>{
+                  qs.forEach(doc => {
+                    docid = doc.id;
+                    console.log(docid);
+                  })
+    })
+    let prodRef = firebase.firestore().collection("products").doc(`${docid}`);
+    await prodRef.get().then(ds => {
+      if (!ds.exists) return;
+      prodRef.update({
+        name : product.name,
+        categoryName : product.categoryName,
+        date : Date.now(),
+        details : product.details,
+        fresh : false
+      });
+    })
+  }
+
+  editProduct(product : IProduct){
+    const prodRef = firebase.firestore().collection("products").doc(`${product.id}`).set(product);
+  }
+
+  confirmUrl(product : IProduct){
+    let data = {url : product.url};
+    this.http.post('http://localhost:8080', data)
+    .subscribe(response => {
+      
+      let responseMap : Map<string, boolean> = new Map(Object.entries(response));
+      console.log(responseMap);
+      if (responseMap.get("valid")){
+        this.addProduct(product);
+      }
+
+      return;
+    })
+  }
+
+
+  async getProducts(){
+    const uid = firebase.auth().currentUser.uid;
+    const userRef = firebase.firestore().doc(`userProfile/${uid}`);
+    let products : string [];
+    await userRef.get().then((ds) => {
+      if (!ds.exists) return;
+      let data = ds.data();
+      let productsMap : Map<string, boolean> = new Map(Object.entries(data["products"]));
+      products = Array.from(productsMap.keys());
+      
+      
+    });
+    console.log("else statement: " + uid);
+    return this.idToObject(products);
+
+  }
+  async getProductsWithUid(uid : string){
+    const userRef = firebase.firestore().doc(`userProfile/${uid}`);
+    let products : string [];
+    await userRef.get().then((ds) => {
+      if (!ds.exists) return;
+      let data = ds.data();
+      let productsMap : Map<string, boolean> = new Map(Object.entries(data["products"]));
+      products = Array.from(productsMap.keys());
+      
+      
+    });
+    
+    return this.idToObject(products);
+
+  }
+
+  async idToObject(productIds : string []){
+    const prodRef = firebase.firestore().collection("products");
+    if (!productIds) return [];
+    for (var i = 0; i < productIds.length; i++){
+      let product = productIds[i];
+      await prodRef.doc(`${product}`).get().then((ds) => {
+        let dataMap = new Map(Object.entries(ds.data()));
+        let temp : IProduct;
+        temp = {
+          name : dataMap.get("name"),
+          categoryName : dataMap.get("categoryName"),
+          url : dataMap.get("url"),
+          id : dataMap.get("id")
+        };
+
+        this.products.push(temp);
+      });
+    }
+    return this.products;
+  }
+
+  filterItems(products, searchTerm) {
+    return products.filter(item => {
+      return item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1 || item.categoryName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+    });
+  }
+
+
+}

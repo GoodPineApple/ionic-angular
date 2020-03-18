@@ -1,0 +1,17 @@
+{
+    "data_type" : "root-collection",
+    "id" : "string",
+    "cat_name" : "name",
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

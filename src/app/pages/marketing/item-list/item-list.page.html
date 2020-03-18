@@ -1,0 +1,23 @@
+<ion-content>
+  <div class="card-count"><span>{{productIdx + 1}} / {{totalCard}}</span></div>
+
+  <div *ngIf="isSuccess">
+    <app-product-detail [product]="productFirst"></app-product-detail>
+  </div>
+
+  <div class="empty-space"></div>
+
+  <div class="buttons" *ngIf="isSuccess">
+    <ion-button expand="full" class="button button--hate" (click)="vote('bad')">
+      <img src="../../../../assets/icon/unlike@3x.png" />
+    </ion-button>
+
+    <ion-button
+      expand="full"
+      class="button button--like"
+      (click)="vote('good')"
+    >
+      <img src="../../../../assets/icon/like@3x.png" />
+    </ion-button>
+  </div>
+</ion-content>

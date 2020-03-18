@@ -1,0 +1,98 @@
+<ion-content>
+  <h1><strong>{{startName}}</strong>님의 아이템 픽 지수</h1>
+
+  <div class="container container--result-and-buttons">
+    <div expand="full" class="button button--retry" (click)="retryCardPick()">
+      <img
+        src="../../../../assets/icon/refresh-page-arrow.svg"
+        alt="refresh-page-arrow"
+      />
+    </div>
+
+    <div class="point-box">
+      <img src="../../../../assets/icon/like@3x.png" />
+      <span> {{recommendPoint}}<span>%</span> </span>
+    </div>
+
+    <div
+      expand="full"
+      class="button button--share"
+      (click)="copyUrlToClipboard()"
+    >
+      <img
+        src="../../../../assets/icon/sharing-files.svg"
+        alt="sharing-files"
+      />
+    </div>
+  </div>
+
+  <div class="phrase phrase--more-than-50" *ngIf="recommendPoint >= 50">
+    {{startName}}님이 픽한 아이템은<br />
+    전체 {{recommendPoint}}% 인기 있는 아이템입니다.<br />
+    트렌디한 {{startName}}님의 픽을 공유해보세요.
+  </div>
+
+  <div
+    class="phrase phrase--less-than-50"
+    #lessThan50
+    *ngIf="recommendPoint < 50"
+  >
+    {{startName}}님이 픽한 아이템은 <br />전체 {{recommendPoint}}%의 픽을 받은
+    아이템입니다. <br />유니크한 {{startName}}님의 픽을 공유해보세요.
+  </div>
+
+  <ion-grid class="ion-margin-top">
+    <ion-row>
+      <ion-col
+        class="ion-no-margin"
+        size="4"
+        *ngFor="let recommendProduct of recommendProductArr"
+      >
+        <div class="container container--item">
+          <div *ngIf="recommendProduct.isVoted">
+            <span class="container--voted-num-tag voted">
+              <img src="../../../../assets/icon/ic_favorite_24px_small.svg" />
+              <span class="voted-num-tag checked">
+                {{recommendProduct.votedNum}}</span
+              >
+            </span>
+          </div>
+
+          <div *ngIf="!recommendProduct.isVoted">
+            <span class="container--voted-num-tag un-voted">
+              <img
+                src="../../../../assets/icon/ic_favorite_border_24px_small.svg"
+              />
+              <span class="voted-num-tag checked">
+                {{recommendProduct.votedNum}}</span
+              >
+            </span>
+          </div>
+
+          <!-- <img src="{{recommendProduct.productImgUrl}}" /> -->
+
+          <img src="{{ recommendProduct.productImgUrl }}" />
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button
+    expand="full"
+    class="button button--detail"
+    (click)="goRecommendProductsDetail()"
+  >
+    자세히 보기
+  </ion-button>
+
+  <div class="empty-space"></div>
+
+  <!--추후 다시 추가 예정 (2020-03-17)-->
+  <!-- <ion-button
+    expand="full"
+    class="button button--pre-reservation"
+    (click)="goPreReservationPage()"
+  >
+    픽 아이템 저장
+  </ion-button> -->
+</ion-content>

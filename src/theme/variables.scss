@@ -1,0 +1,199 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+  /* Set the background of the entire app */
+  --ion-background-color: #eaeaec;
+
+  /** primary **/
+  --ion-color-primary: #362d54;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #4d446f;
+  --ion-color-primary-tint: #706695;
+
+  /** secondary **/
+  --ion-color-secondary: #df825f;
+  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #dd7955;
+  --ion-color-secondary-tint: #e28a6a;
+
+  /** tertiary **/
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #633ce0;
+  --ion-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ec254;
+  --ion-color-success-tint: #28e070;
+
+  /** warning **/
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+  .product-modal .modal-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .button:hover {
+    --background-hover: var(--ion-color-primary-shade);
+  }
+
+  .mT5 {
+    margin-top: 5vh;
+  }
+  .mT10 {
+    margin-top: 10vh;
+  }
+  .mT15 {
+    margin-top: 15vh;
+  }
+  .mT20 {
+    margin-top: 20vh;
+  }
+  .mT25 {
+    margin-top: 25vh;
+  }
+  .mT30 {
+    margin-top: 30vh;
+  }
+  .mT35 {
+    margin-top: 35vh;
+  }
+
+  .mB5 {
+    margin-bottom: 5vh;
+  }
+  .mB10 {
+    margin-bottom: 10vh;
+  }
+  .mB15 {
+    margin-bottom: 15vh;
+  }
+  .mB20 {
+    margin-bottom: 20vh;
+  }
+  .mB25 {
+    margin-bottom: 25vh;
+  }
+  .mB30 {
+    margin-bottom: 30vh;
+  }
+  .mB35 {
+    margin-bottom: 35vh;
+  }
+
+  .mL5 {
+    margin-left: 5vh;
+  }
+  .mL10 {
+    margin-left: 10vh;
+  }
+  .mL15 {
+    margin-left: 15vh;
+  }
+  .mL20 {
+    margin-left: 20vh;
+  }
+  .mL25 {
+    margin-left: 25vh;
+  }
+  .mL30 {
+    margin-left: 30vh;
+  }
+  .mL35 {
+    margin-left: 35vh;
+  }
+
+  .mR5 {
+    margin-right: 5vh;
+  }
+  .mR10 {
+    margin-right: 10vh;
+  }
+  .mR15 {
+    margin-right: 15vh;
+  }
+  .mR20 {
+    margin-right: 20vh;
+  }
+  .mR25 {
+    margin-right: 25vh;
+  }
+  .mR30 {
+    margin-right: 30vh;
+  }
+  .mR35 {
+    margin-right: 35vh;
+  }
+
+  .f5 {
+    font-size: 5px;
+  }
+  .f10 {
+    font-size: 10px;
+  }
+  .f15 {
+    font-size: 15px;
+  }
+  .f20 {
+    font-size: 20px;
+  }
+  .f25 {
+    font-size: 25px;
+  }
+  .f30 {
+    font-size: 30px;
+  }
+  .f35 {
+    font-size: 35px;
+  }
+}

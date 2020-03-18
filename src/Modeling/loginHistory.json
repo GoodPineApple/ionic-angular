@@ -1,0 +1,34 @@
+{
+    "data_type" : "root-collection",
+    "id" : {
+        "data_type" : "string"
+    },
+    "login_email" : {
+        "data_type" : "string"
+    },
+    "login_pw" : {
+        "data_type" : "string"
+    },
+    "result" : {
+        "data_type" : "boolean"
+    },
+    "login_ip" : {
+        "data_type" : "string"
+    },
+    "login_kind" : {
+        "data_type" : "string",
+        "ex" : "admin, app, web"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

@@ -1,0 +1,13 @@
+<h2>픽토리지 이름</h2>
+<p>픽토리지 이름을 입력해주세요</p>
+<form [formGroup]="shopModalForm">
+  <ion-input
+    formControlName="shopName"
+    type="text"
+    placeholder="내 픽토리지"
+    value="{{shopModalForm.value.shopName}}"
+  >
+  </ion-input>
+
+  <ion-button expand="block" (click)="submit(shopModalForm)">저장하기</ion-button>
+</form>

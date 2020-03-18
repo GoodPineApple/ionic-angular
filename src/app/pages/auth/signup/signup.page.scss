@@ -1,0 +1,145 @@
+ion-content {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    width: 168px;
+    margin: 52px 0 44px 0;
+  }
+
+  // form {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+}
+
+ion-input {
+  width: 296px;
+  height: 48px;
+  border-radius: 4px;
+  font-weight: normal;
+  background-color: #ffffff;
+  color: var(--ion-color-primary);
+  transform: translateX(-8px);
+  --padding-start: 20px;
+  --placeholder-color: var(--ion-color-primary);
+  margin-right: 0;
+
+  &.email {
+    margin-bottom: 16px;
+  }
+
+  &.password {
+  }
+}
+
+ion-button {
+  &.button {
+    &--gmail-signin {
+      width: 304px;
+      height: 52px;
+      border-radius: 6px;
+      --background: #4285f4;
+
+      div {
+        width: 48px;
+        height: 48px;
+        border-radius: 4px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translatex(-29px);
+
+        img {
+          width: 23px;
+          height: 23.7px;
+        }
+      }
+    }
+
+    &--signin {
+      width: 304px;
+      height: 52px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.container {
+  &--phrase {
+    margin: 32px 0 32px 0;
+    color: var(--ion-color-primary-tint);
+    background-color: var(--ion-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+      margin: 0 7px 0 7px;
+    }
+  }
+
+  &--keep-login {
+    margin: 22px 0 22px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-primary-tint);
+    margin-left: 10px;
+
+    ion-label {
+      margin-left: 12px;
+    }
+  }
+
+  &--user-engagement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--ion-color-primary);
+    margin-bottom: 73.5px;
+
+    .divider {
+      width: 0;
+      height: 16px;
+      border: solid 0.5px var(--ion-color-primary-tint);
+      margin: 0 18.5px 0 18.5px;
+    }
+
+    .find-account {
+      font-weight: 300;
+    }
+
+    .signup {
+      font-weight: 500;
+    }
+  }
+
+  &--social-login {
+    img {
+      width: 56px;
+      height: 56px;
+
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.line {
+  width: 88px;
+  border: solid var(--ion-color-primary-tint) 0.5px;
+  height: 0;
+}

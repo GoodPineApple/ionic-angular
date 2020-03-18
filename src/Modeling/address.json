@@ -1,0 +1,88 @@
+{
+    "data_type" : "root-collection",
+    "_id": {
+        "data_type" : "string"
+    },
+    "user_id" : {
+        "data_type" : "string"
+    },
+    "is_primary" : {
+        "data_type" : "boolean"
+    },
+    "country_code" : {
+        "data_type" : "string"
+    },
+    "kr_post_code" : {
+        "data_type" : "string"
+    },
+    "kr_road_address" : {
+        "data_type" : "string"
+    },
+    "kr_road_address_eng" : {
+        "data_type" : "string"
+    },
+    "kr_detail_address" : {
+        "data_type" : "string"
+    },
+    "kr_extra_address" : {
+        "data_type" : "string"
+    },
+    "kr_building_code" : {
+        "data_type" : "string"
+    },
+    "kr_building_name" : {
+        "data_type" : "string"
+    },
+    "kr_is_apartment" : {
+        "data_type" : "string"
+    },
+    "kr_sido" : {
+        "data_type" : "string"
+    },
+    "kr_sigungu" : {
+        "data_type" : "string"
+    },
+    "kr_sigungu_code" : {
+        "data_type" : "string"
+    },
+    "kr_road_name_code" : {
+        "data_type" : "string"
+    },
+    "kr_bcode" : {
+        "data_type" : "string"
+    },
+    "us_address_full_name" : {
+        "data_type" : "string"
+    },
+    "us_address_line1" : {
+        "data_type" : "string"
+    },
+    "us_address_line2" : {
+        "data_type" : "string"
+    },
+    "us_address_city" : {
+        "data_type" : "string"
+    },
+    "us_address_postal_code" : {
+        "data_type" : "string"
+    },
+    "us_address_instruction" : {
+        "data_type" : "string"
+    },
+    "us_address_gate_code" : {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+    
+}

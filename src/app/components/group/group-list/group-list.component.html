@@ -1,0 +1,37 @@
+
+<ion-button expand="block" class="ion-margin-top" (click)="addGroup()">
+  Add Group
+</ion-button>
+
+
+<ion-grid>
+  <ion-row (click)="eidtGroup()">
+    <ion-col offset="0" size="10.5">
+      <h2>아이템 박스</h2>
+    </ion-col>
+    <ion-col offset="0" size="1.5" >
+      <ion-fab-button size="small">
+        <ion-icon name="ios-share"></ion-icon>
+      </ion-fab-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+<ion-grid @items *ngFor="let group of groupArr | async">
+  <ion-row>
+    <ion-col offset="0" size="10.5" (click)="goGrpDtl(group.id, group)">
+      <h2>{{ group.groupName }}({{ group.groupDetail }}) </h2>
+    </ion-col>
+    <ion-col offset="0" size="1.5" >
+      <ion-fab-button size="small" (click)="shareGroup(group.id, group)" >
+        <ion-icon name="ios-share"></ion-icon>
+      </ion-fab-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <app-product-carousel-state [groupId]="group.id" [GroupSlideOpts]="GroupSlideOpts"></app-product-carousel-state>
+  </ion-row>
+</ion-grid>
+

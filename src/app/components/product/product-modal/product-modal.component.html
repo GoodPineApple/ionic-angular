@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="img-container">
+    <img src="{{ productImgUrl }}" />
+  </div>
+
+  <!-- <div *ngIf="경로">
+    <div>{{votedNum}}</div>
+  </div> -->
+
+  <div>
+    <!-- <h3>{{ shopSiteName }}</h3> -->
+    <h1>{{ productName }}</h1>
+
+    <h2>{{ productCurrency }} {{ productPrice }}</h2>
+    {{ productOption }}
+    {{ productDetail }}
+  </div>
+
+  <!--URL별로 버튼을 다르게 할 필요-->
+  <div class="container--button">
+    <!-- <div *ngIf="false"> -->
+
+    <ion-button
+      class="button--modal-close"
+      expand="full"
+      (click)="dismissModal()"
+      >닫기</ion-button
+    >
+    <!-- </div> -->
+  </div>
+</ion-content>

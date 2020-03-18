@@ -1,0 +1,128 @@
+{
+    "data_type" : "root-collection",
+    "_id": {
+        "data_type" : "string"
+    },
+    "product_id": {
+        "data_type" : "string"
+    },
+    "user_id": {
+        "data_type" : "string"
+    },
+    "order_name": {
+        "data_type" : "string",
+        "notes" : "when User create order, insert product.product_name to here. maintain this value, although product_name.product_name has changed" 
+    },
+    "deadline": {
+        "data_type" : "string"
+    },
+    "option": {
+        "data_type" : "string"
+    },
+    "qty": {
+        "data_type" : "number"
+    },
+    "img_path": {
+        "data_type" : "string"
+    },
+    "price": {
+        "data_type" : "map",
+        "product" : {
+            "data_type" : "number"
+        },
+        "product_currency" : {
+            "data_type" : "string"
+        },
+        "local_tax" : {
+            "data_type" : "number"
+        },
+        "local_tax_currency" : {
+            "data_type" : "string"
+        },
+        "local_ship" : {
+            "data_type" : "number"
+        },
+        "local_ship_currency" : {
+            "data_type" : "string"
+        },
+        "air_ship" : {
+            "data_type" : "number"
+        },
+        "air_ship_currency" : {
+            "data_type" : "string"
+        },
+        "domestic_ship" : {
+            "data_type" : "number"
+        },
+        "domestic_ship_currency" : {
+            "data_type" : "string"
+        },
+        "buyer_fee" : {
+            "data_type" : "number"
+        },
+        "buyer_fee_currency" : {
+            "data_type" : "string"
+        }
+    },
+    "buyer": {
+        "data_type" : "sub-collection",
+        "buyer_name" : {
+            "data_type" : "string"
+        },
+        "buyer_email" : {
+            "data_type" : "string"
+        },
+        "buyer_phone": {
+            "data_type" : "map",
+            "country_code" : "string",
+            "phone_num" : "string"
+        },
+        "buyer_addr" : {
+            "data_type" : "sub-collection",
+            "notes" : "same structure with address.json"
+        },
+        "buyer_customer_num": {
+            "data_type" : "string"
+        }
+    },
+
+    "seller": {
+        "data_type" : "sub-collection",
+        "seller_name" : {
+            "data_type" : "string"
+        },
+        "seller_email" : {
+            "data_type" : "string"
+        },
+        "seller_phone": {
+            "data_type" : "map",
+            "country_code" : "string",
+            "phone_num" : "string"
+        },
+        "seller_addr" : {
+            "data_type" : "sub-collection",
+            "notes" : "same structure with address.json"
+        },
+        "seller_customer_num": {
+            "data_type" : "string"
+        }
+    },
+    "status": {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "approval_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+}

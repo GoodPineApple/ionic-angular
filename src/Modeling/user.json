@@ -1,0 +1,62 @@
+{
+    "data_type" : "root-collection",
+    "_id": {
+        "data_type" : "string"
+    },
+    "user_email": {
+        "data_type" : "string"
+    },
+    "user_pw": {
+        "data_type" : "string"
+    },
+    "interest_cat_map" : {
+        "data_type" : "map",
+        "cat_id" : "boolean"
+    },
+    "user_name": {
+        "data_type" : "string"
+    },
+    "phone": {
+        "data_type" : "map",
+        "country_code" : "string",
+        "phone_num" : "string"
+    },
+    "recent_addr" : {
+        "data_type" : "map",
+        "addr_id" : "boolean"
+    },
+    "customer_num": {
+        "data_type" : "string"
+    },
+    "credit_card":{
+        "data_type" : "map",
+        "owner_name" : {
+            "data_type" : "string"
+        }
+    },
+    "device_token": {
+        "data_type" : "string"
+    },
+    "device_type": {
+        "data_type" : "string"
+    },
+    "is_admin": {
+        "data_type" : "boolean"
+    },
+    "status": {
+        "data_type" : "string"
+    },
+    "register_date" : {
+        "data_type" : "timestamp"
+    },
+    "register_Id" : {
+        "data_type" : "string"
+    },
+    "update_date" : {
+        "data_type" : "timestamp"
+    },
+    "update_Id" : {
+        "data_type" : "string"
+    }
+
+}

@@ -1,0 +1,107 @@
+@import "../../../../sass/abstracts/mixins";
+@import "../../../../sass/base/base";
+
+ion-content {
+  --padding-top: 36px;
+  --padding-start: 36px;
+  --padding-end: 36px;
+  overflow: hidden;
+}
+
+.title--primary {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 5px 0px var(--ion-color-primary-shade);
+  -webkit-text-stroke: 1px var(--ion-color-primary-shade);
+
+  span {
+    color: var(--ion-color-secondary);
+  }
+}
+
+.title--sub {
+  margin: 29px 0 36px 0;
+  height: 116px;
+  font-family: NotoSansCJKkr;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--ion-color-primary-tint);
+}
+
+ion-input {
+  width: 320px;
+  height: 48px;
+  border-radius: 8px;
+  font-weight: normal;
+  background-color: #ffffff;
+  transform: translateX(-8px);
+
+  --padding-start: 20px;
+  --placeholder-color: var(--ion-color-primary);
+}
+
+ion-label {
+  &.label {
+    &--error-message {
+      color: #ff0000;
+      font-size: 12px;
+    }
+  }
+}
+
+.description {
+  margin-top: 32px;
+  width: 235px;
+  height: 108px;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--ion-color-primary);
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+ion-button {
+  --box-shadow: 0;
+
+  &.button {
+    &--reservation {
+      width: 100%;
+      height: 72px;
+      --color: var(--ion-color-primary);
+      font-family: NotoSansCJKkr;
+      font-size: 20px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.8;
+      letter-spacing: normal;
+      text-align: center;
+      color: #ffffff;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    &-disabled {
+      --opacity: 0.95;
+    }
+  }
+}
+
+.empty-space {
+  height: 150px;
+}

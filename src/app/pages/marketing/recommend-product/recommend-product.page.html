@@ -1,0 +1,19 @@
+<ion-content>
+  <div *ngFor="let recommendProduct of recommendProductArr">
+    <app-product-detail
+      [product]="recommendProduct"
+      [location]="location"
+    ></app-product-detail>
+  </div>
+
+  <div class="empty-space"></div>
+
+  <!--추후 다시 추가 예정 (2020-03-17)-->
+  <!-- <ion-button
+    expand="full"
+    class="button button--pre-reservation"
+    (click)="goPreReservationPage()"
+  >
+    픽 아이템 저장
+  </ion-button> -->
+</ion-content>
